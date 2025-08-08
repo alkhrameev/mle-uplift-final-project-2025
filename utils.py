@@ -1,6 +1,12 @@
 import matplotlib.pyplot as plt
 import numpy as np
 from sklift.metrics import uplift_by_percentile
+import numpy as np
+import matplotlib.pyplot as plt
+from sklift.metrics import (
+    uplift_curve, qini_curve,
+    uplift_auc_score, qini_auc_score
+)
 
 def custom_uplift_by_percentile(y_true, uplift, treatment, 
                                kind='line', bins=10, string_percentiles=True, 
@@ -108,5 +114,4 @@ def custom_uplift_by_percentile(y_true, uplift, treatment,
     ax.grid(True, linestyle='--', alpha=0.7)
     
     # оптимизируем расположение элементов на графике
-    plt.tight_layout()
-    return fig
+    plt.tight_layout
